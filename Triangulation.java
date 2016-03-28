@@ -6,13 +6,29 @@ public class Triangulation {
 	public static void main(String[] args) {
 		Scanner s = new Scanner( System.in );
 
-		Triangle t = new Triangle(new Point(64,0), new Point(23,30), new Point(51,30));
-		System.out.println( t.getArea() );
+		ArrayList<Point> pts = new ArrayList<>();
+		
+		int n_vertex = s.nextInt();
+		for (int i = 0; i < n_vertex; i++)
+			p.add( new Point(s.nextInt(), s.nextInt()) );	
+		
+		Polygon pol = new Polygon(pts);
 	}
 }
 
 class Polygon {
-	public ArrayList<Point> points = new ArrayList<>();
+	public ArrayList<Point> points;
+
+	public Polygon( ArrayList<Points> points ) {
+		this.points = points;
+	}
+
+	// TODO: triagulation formula
+
+	// 1: formas convexas
+
+
+	// 2: formas côncavas (+difícil)
 	
 }
 
@@ -42,3 +58,32 @@ class Point {
 		this.y = y;
 	}
 }
+
+class Edge {
+	public Point a, b;
+
+	public Edge( Point a, Point b ) {
+		this.a = a;
+		this. b = b;
+	}
+
+	
+}
+
+/*
+Sample Input
+
+1
+6
+7 0
+6 2
+9 5
+3 5
+0 3
+1 1
+
+Sample Output
+
+9.0
+
+*/
